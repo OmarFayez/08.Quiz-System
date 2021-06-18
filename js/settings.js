@@ -23,14 +23,22 @@ async startQuiz()
 //    let url =`https://opentdb.com/api.php?amount=${numberOfQ}&category=${category}&difficulty=${difficulty}`
    let data =(await(await fetch(`https://opentdb.com/api.php?amount=${numberOfQ}&category=${category}&difficulty=${difficulty}`)).json()).results
    // console.log(data)
-   if(data.length>0&&numberOfQ!=null)
+   if(data.length>=numberOfQ&&numberOfQ>0)
    {
     $(this.settings).fadeOut(300,()=>$(this.quiz).fadeIn(300))
     new quiz(data,numberOfQ)
    }
-   else
+   else if(data.length<numberOfQ)
    {
+      this.alert1.innerHTML=`Max Questions For Your Choice Is ${data.length}`
      this.alert1.classList.replace("d-none","d-block")
+    
+   }
+   else if(numberOfQ<=0)
+   {
+    this.alert1.innerHTML=`You Must Enter Positive Number`
+    this.alert1.classList.replace("d-none","d-block")
+
    }
 
 }
