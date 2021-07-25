@@ -4,7 +4,6 @@
 
 - [Overview](#overview)
   - [About](#About)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [Run Project Local](#Run-Project-Local)
   - [First Way](#First-Way)
@@ -18,10 +17,6 @@
 
 -This is a quiz system where you can select category from many categories, difficulty and number of questions but don't exceed 50 questions.Each question you solve appears if it is correct or incorrect, and in the end the total result will be shown to you.<br>
 -You must go live to run quiz system .
-
-### Screenshot
-
-![quiz](https://im.ezgif.com/tmp/ezgif-1-c853ad8cb30e.gif)
 
 ### Links
 
